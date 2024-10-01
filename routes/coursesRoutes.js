@@ -5,14 +5,14 @@ const router = express.Router();
 
 const coursesController = require('../controllers/courseController');
 
-const validationSchema = require('../middlewares/validationSchema')
+const {CoursesValidationSchema} = require('../middlewares/validationSchema');
 
 
 
 router.route('/')
   .get(coursesController.getAllCourses)
   .post(
-    validationSchema,
+    CoursesValidationSchema(),
     coursesController.createCourse
   );
 
@@ -23,4 +23,4 @@ router.route('/:courseId')
 
 
 
-module.exports = router
+module.exports = router ;

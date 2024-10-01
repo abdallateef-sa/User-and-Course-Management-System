@@ -1,19 +1,23 @@
 const express = require('express');
-const { body, validationResult } = require('express-validator');
-const coursesController = require('./controllers/courseController');
 const app = express();
+
+const coursesRouter = require('./routes/coursesRoutes');
+
+const usersRouter = require('./routes/usersRoutes')
 
 // middleware for parsing json data in body of request
 app.use(express.json()); // or app.use(bodyParser.json());
 
 
-const coursesRouter = require('./routes/coursesRoutes');
+// crud operation =>          create ==> post | read ==> get | update ==> patch | delete ==> delete
+
 app.use('/api/courses' , coursesRouter);
+
+app.use('/api/users' , usersRouter);
+
 
 
 
 app.listen(3000, () => {
   console.log('Server running on port 3000');
 });
-
- 

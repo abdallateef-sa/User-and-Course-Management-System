@@ -1,5 +1,12 @@
 const express = require('express');
 const app = express();
+const mongoose = require('mongoose');
+
+const url = "mongodb+srv://abdallateefshohdy0180:DB123@cluster1.hliuk.mongodb.net/courses-platform?retryWrites=true&w=majority&appName=Cluster1";
+
+mongoose.connect(url).then(()=>{
+  console.log('database connected');
+})
 
 const coursesRouter = require('./routes/coursesRoutes');
 

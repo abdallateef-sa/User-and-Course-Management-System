@@ -9,13 +9,5 @@ const CoursesValidationSchema = ()=>{
   
 }
 
-const usersValidationSchema = ()=>{
-  return [
-   body('name').notEmpty().withMessage('Please provide name'),
-   body('age').isNumeric().withMessage('Please provide age as a number'),
-   body('age').isInt({max: 100}).withMessage('Please provide age less than 100'),
- ]
-   
- }
 
-module.exports = {CoursesValidationSchema , usersValidationSchema};
+module.exports = {CoursesValidationSchema };

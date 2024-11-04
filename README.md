@@ -71,6 +71,10 @@ Below are the main API endpoints available in this application:
 - **PATCH /api/users/:userId**: Update a specific user by ID.
 - **DELETE /api/users/:userId**: Delete a specific user by ID.
 
+## Live Demo
+You can view the live version of the project at the following link: [User and Course Management System](https://user-and-course-management-system.onrender.com)
+
+
 ## Usage
 - Use Postman or any API client to interact with the API endpoints.
 - For protected routes (like creating or updating courses), include a JWT token in the Authorization header formatted as follows:
